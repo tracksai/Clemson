@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>  
+<head>
+    <title></title>
+    <!-- Bootstrap CDN BEGIN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- Bootstrap CDN END -->
+</head>
+<body>
+    <h4>Question 2</h4>
+    <form action="http://localhost/index.php" method="post" class="col-md-12">
+        <h4>Insert Record</h4>
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="username">UserName:</label>
+            <div class="col-md-12">
+                <input id="user_name" name="user_name" type="text" placeholder="UserName" class="form-control input-md" required="" />
+                <div class="error" id='usernamemsg'></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="username">Mobile No:</label>
+            <div class="col-md-12">
+                <input id="phone_number" name="phone_number" type="text" placeholder="Mobile Number" class="form-control input-md" required="" />
+                <div class="error" id='mobilenomsg'></div>
+            </div>
+        </div>
+         
+        <input class="btn btn-lg btn-info btn-block col-md-6 col-sm-6" type="submit">
+    </form>
+
+</body>
+</html>
+ 

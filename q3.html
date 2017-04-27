@@ -1,0 +1,53 @@
+﻿
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 
+    <!-- Bootstrap CDN BEGIN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- Bootstrap CDN END -->
+</head>
+
+<body >
+    <h4>Question 3</h4>
+    <div name="order" id="order" class="col-md-12"> 
+        <h4>Auto Complete With Masking :</h4>
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="numberFormate">Enter Number To Format</label>
+            <div class="col-md-12">
+                <input id="numberFormate" name="numberFormate"  class="simple-field-data-mask form-control input-md" required="" type="text" data-mask="00-000-0-0000" maxlength="20" placeholder=" XX-XXX-X-XXXX" />
+                <div class="error" id='numberFormatemsg'></div>
+            </div>
+        </div>
+    </div> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="jquery.mask.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                autoCompleteController();
+            });
+
+            function autoCompleteController() {
+                var phoneNumber = ['00-000-0-1200',
+                    '12-000-0-1200',
+                    '00-345-0-1200',
+                    '00-000-8-1200',
+                    '123-678-9-1200',
+                    '05-700-1-1200'
+                ];
+
+                $('#numberFormate').autocomplete({
+                    source: phoneNumber,
+                    minLength: 0,
+                    scroll: true
+                }).focus(function () {
+                    $(this).autocomplete("search", "");
+                });
+            }
+        </script>
+
+</body>
+</html>
